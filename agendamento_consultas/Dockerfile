@@ -1,11 +1,14 @@
-# Usando uma imagem PHP com Apache
-FROM php:7.4-apache
+# Imagem base com PHP e Apache
+FROM php:8.1-apache
 
-# Instalar extensões necessárias
-RUN docker-php-ext-install pdo pdo_mysql
+# Instalar extensões necessárias (incluindo a extensão MySQL)
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Copiar os arquivos do site para o diretório do Apache
+# Copiar os arquivos do projeto para o diretório do container
 COPY . /var/www/html/
 
-# Expor a porta 80
+# Definir permissões
+RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
+
+# Expor a porta padrão do Apache
 EXPOSE 80
