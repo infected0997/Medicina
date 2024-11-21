@@ -1,8 +1,8 @@
 <?php
-$servername = "mysql";  // Nome do link do MySQL
-$username = "usuario";  // O nome de usuário definido no MySQL
-$password = "senha";    // A senha definida no MySQL
-$dbname = "meu_banco";  // O nome do banco de dados definido no MySQL
+$servername = "mysql";  
+$username = "usuario";  
+$password = "senha";    
+$dbname = "meu_banco";
 
 // Criar a conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
