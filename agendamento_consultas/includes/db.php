@@ -1,7 +1,7 @@
 <?php
-$hostname = "mysql";  
-$username = "usuario";  
-$password = "senha";    
+$hostname = "localhost";  
+$username = "root";  
+$password = "root";    
 $dbname = "saude_db";
 
 // Criar a conexão
