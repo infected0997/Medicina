@@ -1,5 +1,5 @@
 <?php
-$hostname = "localhost";  
+$hostname = "mysql-container";  
 $username = "root";  
 $password = "root";    
 $dbname = "saude_db";
