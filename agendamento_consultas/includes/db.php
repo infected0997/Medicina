@@ -1,11 +1,11 @@
 <?php
-$servername = "mysql";  
+$hostname = "mysql";  
 $username = "usuario";  
 $password = "senha";    
-$dbname = "meu_banco";
+$dbname = "saude_db";
 
 // Criar a conexão
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($hostname, $username, $password, $dbname);
 
 // Verificar se a conexão foi bem-sucedida
 if ($conn->connect_error) {
