@@ -1,13 +1,14 @@
 <?php
-$host = 'localhost';
-$dbname = 'saude_db';
-$username = 'root';  
-$password = 'senha_root';  
+$servername = "mysql-container"; 
+$username = "user";     
+$password = "user_password";  
+$dbname = "saude_db";   
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo 'Connection failed: ' . $e->getMessage();
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Checar a conexão
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
 }
+echo "Conectado com sucesso ao banco de dados!";
 ?>
