@@ -2,7 +2,7 @@
 $host = 'localhost';
 $dbname = 'saude_db';
 $username = 'root';  
-$password = '';  
+$password = 'senha_root';  
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
