@@ -1,7 +1,7 @@
 <?php
-$servername = "mysql-container"; 
-$username = "user";     
-$password = "user_password";  
+$servername = "db"; 
+$username = "usuario";     
+$password = "senha";  
 $dbname = "saude_db";   
 
 $conn = new mysqli($servername, $username, $password, $dbname);
